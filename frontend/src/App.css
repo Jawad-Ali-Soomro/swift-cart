@@ -20,3 +20,7 @@
 .justify-around {
   justify-content: space-around;
 }
+
+.bg-red {
+  background: red;
+}
