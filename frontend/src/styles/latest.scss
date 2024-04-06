@@ -3,12 +3,12 @@
     padding-bottom: 10vh;
     align-items: start;
     justify-content: start;
-    width: calc(100% - 150px);
-    padding-left: 150px;
+    width: 100%;
     h1{
         font-size: 3rem;
         font-weight: 300;
         text-transform: uppercase;
+        padding-left: 150px;
         span{
             color: #111;
             font-weight: 900;
@@ -16,17 +16,43 @@
         }
     }
     .main-wrap {
+        gap: 50px;
+        width: 100%;
+        justify-content: center;
         margin-top: 10vh;
         flex-wrap: wrap;
         .card {
-            padding: 30px;
             border-radius: 10px;
-            border: 1px solid rgba($color: #000000, $alpha: 0.1);
+            cursor: pointer;
+            position: relative;
+            background: #eeeeee7e;
+            overflow: hidden;
             img{
-                width: 250px;
-                height: 250px;
+                width: 320px;
+                height: 28  0px;
                 background: white;
             }
+            .price{
+                position: absolute;
+                width: 80px;
+                height: 80px;
+                border-bottom-left-radius: 100%;
+                top: 0px;
+                right: 0px;
+                color: #111;
+                border-bottom: 1px solid rgba($color: #000000, $alpha: 0.1);
+                border-left: 1px solid rgba($color: #000000, $alpha: 0.1);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                p{
+                    font-size: 1rem;
+                    font-weight: 600;
+                    padding-bottom: 20px;
+                    padding-left: 20px;
+                }
+            }
         }
+        
     }
 }

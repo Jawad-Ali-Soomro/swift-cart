@@ -17,11 +17,11 @@ const Header = () => {
   const [show_menu, set_show_menu] = useState(false);
   const tab = window.location.pathname;
   return (
-    <div className="header-wrap flex col">
+    <div className="header-wrap flex">
       <div className="logo flex">
         <img src="./logo.png" alt="" />
       </div>
-      <div className="icons flex col">
+      <div className="icons flex">
         <BiCart className="icon" />
         <BiHeart className="icon" />
         <BiCategory className="icon" />
@@ -31,11 +31,10 @@ const Header = () => {
       <div
         className="menu flex col"
         style={{
-          maxHeight: `${show_menu == true ? "400px" : "0px"}`,
-          border: `${show_menu == true ? "1px solid rgba(0,0,0,0.2)" : "0px"}`,
+          maxWidth: `${show_menu == true ? "240px" : "0px"}`,
         }}
       >
-        <ul className="flex col">
+        <ul className="flex">
           <li className="flex" data-show="Help">
             <BiSupport className="icon" />
           </li>
