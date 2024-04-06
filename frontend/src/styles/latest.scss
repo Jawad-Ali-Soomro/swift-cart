@@ -1,0 +1,32 @@
+.latest {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    align-items: start;
+    justify-content: start;
+    width: calc(100% - 150px);
+    padding-left: 150px;
+    h1{
+        font-size: 3rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        span{
+            color: #111;
+            font-weight: 900;
+            border-bottom: 1px solid;
+        }
+    }
+    .main-wrap {
+        margin-top: 10vh;
+        flex-wrap: wrap;
+        .card {
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba($color: #000000, $alpha: 0.1);
+            img{
+                width: 250px;
+                height: 250px;
+                background: white;
+            }
+        }
+    }
+}

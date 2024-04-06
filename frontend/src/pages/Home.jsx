@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/home.scss";
 import Banner from "../components/Banner";
 import Header from "../components/Header";
+import Latest from "../components/Latest";
 
 const Home = () => {
   return (
@@ -42,6 +43,7 @@ const Home = () => {
           </li>
         </ul>
       </div>
+      <Latest />
     </div>
   );
 };
