@@ -1,53 +1,34 @@
 import React, { useState } from "react";
 import "../styles/header.scss";
 import {
-  BiBell,
   BiCart,
   BiCategory,
   BiHeart,
-  BiMenu,
-  BiPhone,
-  BiSearch,
-  BiSolidBell,
-  BiSupport,
   BiUser,
+  BiSupport,
+  BiSearch
 } from "react-icons/bi";
 
 const Header = () => {
-  const [show_menu, set_show_menu] = useState(false);
+  const [categories , set_categories] = useState(false)
   const tab = window.location.pathname;
   return (
     <div className="header-wrap flex">
+      
       <div className="logo flex">
-        <img src="./logo.png" alt="" />
+        <h2 className="flex">Swift <img src="./logo.png" alt="" /> <span>Cart</span></h2>
       </div>
       <div className="icons flex">
+      <div className="search-bar flex">
+        <input type="text" />
+        <BiSearch style={{cursor: 'pointer'}} />
+      </div>
         <BiCart className="icon" />
         <BiHeart className="icon" />
-        <BiCategory className="icon" />
-        <BiPhone className="icon" />
-        <BiMenu className="icon" onClick={() => set_show_menu(!show_menu)} />
+        <BiUser className="icon" />
       </div>
-      <div
-        className="menu flex col"
-        style={{
-          maxWidth: `${show_menu == true ? "240px" : "0px"}`,
-        }}
-      >
-        <ul className="flex">
-          <li className="flex" data-show="Help">
-            <BiSupport className="icon" />
-          </li>
-          <li className="flex" data-show="Notifications">
-            <BiBell className="icon" />{" "}
-          </li>
-          <li className="flex" data-show="Search">
-            <BiSearch className="icon" />{" "}
-          </li>
-          <li className="flex" data-show="Account">
-            <BiUser className="icon" />
-          </li>
-        </ul>
+      <div className="help flex">
+        <BiSupport />
       </div>
     </div>
   );
