@@ -3,6 +3,7 @@ import "../styles/home.scss";
 import Banner from "../components/Banner";
 import Header from "../components/Header";
 import Latest from "../components/Latest";
+import Famous from "../components/Famous";
 
 const Home = () => {
   return (
@@ -15,7 +16,6 @@ const Home = () => {
             <h1>your</h1>
             <h1>future!</h1>
           </div>
-          <button>Explore</button>
         </div>
         <Banner />
       </div>
@@ -44,6 +44,7 @@ const Home = () => {
         </ul>
       </div>
       <Latest />
+      <Famous />
     </div>
   );
 };

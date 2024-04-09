@@ -6,23 +6,23 @@ import {
   BiHeart,
   BiUser,
   BiSupport,
-  BiSearch
+  BiSearch,
+  BiPhone
 } from "react-icons/bi";
+import { BsFillTelephoneFill } from "react-icons/bs";
 
 const Header = () => {
-  const [categories , set_categories] = useState(false)
   const tab = window.location.pathname;
   return (
     <div className="header-wrap flex">
       
       <div className="logo flex">
-        <h2 className="flex">Swift <img src="./logo.png" alt="" /> <span>Cart</span></h2>
+      <img src="./logo.png" alt="" />
+      <h2>wiftcart</h2>
       </div>
       <div className="icons flex">
-      <div className="search-bar flex">
-        <input type="text" />
-        <BiSearch style={{cursor: 'pointer'}} />
-      </div>
+        <BiSearch className="icon" />
+        <BiPhone className="icon" />
         <BiCart className="icon" />
         <BiHeart className="icon" />
         <BiUser className="icon" />

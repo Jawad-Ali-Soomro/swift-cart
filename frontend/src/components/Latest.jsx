@@ -1,4 +1,5 @@
 import '../styles/latest.scss'
+import { BiCartAdd, BiDetail, BiHeart, BiInfoCircle, BiPurchaseTag } from 'react-icons/bi'
 
 const Latest = () => {
     const data = [{
@@ -28,13 +29,21 @@ const Latest = () => {
     }]
     return <div className="latest flex col">
         <h1>Latest <span>Arrivals</span></h1>
-        <div className="main-wrap flex">
+        <div className="latest-wrap flex">
             {
                 data.map((item) => {
                     return <div className="card flex" key={item.name} data-after={item.name}>
                         <img src={item.img} alt="" />
-                        <div className="price">
-                            <p>${item.price}</p>
+                        <div className="menus flex col">
+                            <div className="price">
+                                <p>${item.price}</p>
+                            </div>
+                                <div className="icons flex">
+                                <BiCartAdd className='icon' />
+                            <BiHeart className='icon' />
+                            <BiInfoCircle className='icon' />
+                            <BiPurchaseTag className='icon' />
+                                </div>
                         </div>
                     </div>
                 })
