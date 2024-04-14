@@ -26,25 +26,34 @@ const Home = () => {
             <h2>Free Delievery</h2>
           </li>
           <li className="flex col">
-          <img src="./images/fashion.png" alt="" />
+            <img src="./images/fashion.png" alt="" />
             <h2>Fashion Items</h2>
           </li>
           <li className="flex col">
-          <img src="./images/home_and_decor.png" alt="" />
+            <img src="./images/home_and_decor.png" alt="" />
             <h2>Home Items</h2>
           </li>
           <li className="flex col">
-          <img src="./images/mart.png" alt="" />
+            <img src="./images/mart.png" alt="" />
             <h2>items on sale</h2>
           </li>
           <li className="flex col">
-          <img src="./images/electronics.png" alt="" />
+            <img src="./images/electronics.png" alt="" />
             <h2>Electronics</h2>
           </li>
         </ul>
       </div>
       <Latest />
       <Famous />
+      <div className="newsletter-wrap flex col">
+        <h1>
+          Signup for <span>newsletter</span>
+        </h1>
+        <div className="wrap flex">
+          <input type="text" placeholder="~ EMAIL ADDRESS ~" />
+          <button>SUBSCRIBE</button>
+        </div>
+      </div>
     </div>
   );
 };

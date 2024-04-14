@@ -2,33 +2,32 @@ import React, { useState } from "react";
 import "../styles/header.scss";
 import {
   BiCart,
-  BiCategory,
   BiHeart,
   BiUser,
   BiSupport,
   BiSearch,
-  BiPhone
+  BiCategory,
 } from "react-icons/bi";
-import { BsFillTelephoneFill } from "react-icons/bs";
 
 const Header = () => {
-  const tab = window.location.pathname;
+  const [help, set_show_help] = useState(false);
   return (
     <div className="header-wrap flex">
-      
-      <div className="logo flex">
-      <img src="./logo.png" alt="" />
-      <h2>wiftcart</h2>
-      </div>
       <div className="icons flex">
-        <BiSearch className="icon" />
-        <BiPhone className="icon" />
         <BiCart className="icon" />
         <BiHeart className="icon" />
+        <BiCategory className="icon" />
         <BiUser className="icon" />
       </div>
-      <div className="help flex">
+      <div className="help flex"  onClick={() => set_show_help(!help)}>
         <BiSupport />
+        <div
+          className="help-main-wrap"
+          style={{
+            maxHeight: `${help == true ? "400px" : "0%"}`,
+            border: `${help == true ? "1px solid rgba(0,0,0,0.1)" : "none"}`,
+          }}
+        ></div>
       </div>
     </div>
   );
