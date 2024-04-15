@@ -4,7 +4,7 @@
     overflow: hidden;
     .content{
         max-width: 600px;
-        align-items: start;
+        align-items: end;
         height: 100vh;
         .top{
             h1{
@@ -13,33 +13,12 @@
                 font-weight: 900;
                 color: #111;
                 line-height: 120px;
-            }
-            h1:nth-child(2) {
-                margin-left: 50px;
+                text-align: right;
             }
             h1:last-child{
-                padding-left: 100px;
                 color: transparent;
                 -webkit-text-stroke: 1px #111;
             }
-        }
-        button{
-            width: 300px;
-            height: 60px;
-            margin-left: 250px;
-            margin-top: 20px;
-            background: #111;
-            border: none;
-            color: white;
-            font-size: 1.2rem;
-            text-transform: uppercase;
-            font-weight: 900;
-            letter-spacing: 2px;
-            border-radius: 30px;
-            cursor: pointer;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
         }
     }
 }

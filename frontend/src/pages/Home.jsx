@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles/home.scss";
-import Banner from "../components/Banner";
 import Header from "../components/Header";
 import Latest from "../components/Latest";
 import Famous from "../components/Famous";
@@ -10,6 +9,7 @@ const Home = () => {
     <div className="home-wrap flex col">
       <Header />
       <div className=" main-wrap flex">
+        <img className="banner-img" src="./img.png" alt="" />
         <div className="content flex col">
           <div className="top">
             <h1>shop</h1>
@@ -17,7 +17,6 @@ const Home = () => {
             <h1>future!</h1>
           </div>
         </div>
-        <Banner />
       </div>
       <div className="services">
         <ul className="flex">
