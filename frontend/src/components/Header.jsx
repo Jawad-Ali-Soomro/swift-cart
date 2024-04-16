@@ -19,7 +19,7 @@ const Header = () => {
       <div className="icons flex">
         <BiCart className="icon" />
         <BiHeart className="icon" />
-        <BiCategory className="icon" />
+        <BiCategory className="icon" onClick={() => navigate("/shop")} />
         <BiUser className="icon" />
       </div>
       <div className="help flex" onClick={() => set_show_help(!help)}>
@@ -34,15 +34,19 @@ const Header = () => {
       >
         <div className="input-wrap flex">
           <BiEnvelope className="icon" />
-          <input type="text" placeholder="E M A I L . . ."/>
+          <input type="text" placeholder="E M A I L . . ." />
         </div>
         <div className="input-wrap flex">
           <BiUser className="icon" />
-          <input type="text" placeholder="N A M E . . ."/>
+          <input type="text" placeholder="N A M E . . ." />
         </div>
         <div className="input-wrap flex">
           <BiMessage className="icon" />
-          <input type="text" placeholder="M E S S A G E . . ." className="message" />
+          <input
+            type="text"
+            placeholder="M E S S A G E . . ."
+            className="message"
+          />
         </div>
         <button>Send</button>
       </div>
